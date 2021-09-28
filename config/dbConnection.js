@@ -8,7 +8,7 @@ const connMySQL = () => {
     return mysql.createConnection({
         host: "localhost",
         user: "root",
-        password: "",
+        password: "Sulore#3145",
         database: "newsportal"
     });
 };
