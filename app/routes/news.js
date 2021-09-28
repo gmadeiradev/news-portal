@@ -5,7 +5,7 @@ module.exports = (app) => {
         let conn = mysql.createConnection({
             host: "localhost",
             user: "root",
-            password: "Sulore#3145",
+            password: "",
             database: "newsportal"
         });
 
