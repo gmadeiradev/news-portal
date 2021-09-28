@@ -1,9 +1,7 @@
-const dbConnection = require("../../config/dbConnection");
-
 module.exports = (app) => {
-    let conn = dbConnection();
-
     app.get("/news-group", (req, res) => {
+        let conn = app.config.dbConnection();
+
         conn.query("SELECT * FROM news", (err, result) => {
             if (err) { throw err };
             // select view
