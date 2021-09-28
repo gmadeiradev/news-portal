@@ -3,4 +3,4 @@ module.exports = (app) => {
     app.get("/form-add-news", (req, res) => {
         res.render("admin/form-add-news");
     });
-}
+};
