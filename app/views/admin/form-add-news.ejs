@@ -12,6 +12,15 @@
 
 	<h1>Add News</h1>
 
+	<form action="/news/save" method="POST">
+		<label for="">Title</label>
+		<input type="text" id="title" name="title" placeholder="News Title">
+		<br />
+		<label for="">News</label>
+		<textarea name="news" id="news" cols="30" rows="5"></textarea>
+		<br />
+		<input type="submit" value="Send">
+	</form>
 </body>
 
 </html>

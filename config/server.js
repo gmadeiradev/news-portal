@@ -8,6 +8,9 @@ app.set("view engine", "ejs");
 // set views property
 app.set("views", "./app/views");
 
+// middleware
+app.use(express.urlencoded({ extended: true }));
+
 // auto load
 // scam application and include into server
 consign()

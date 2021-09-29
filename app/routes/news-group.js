@@ -1,7 +1,7 @@
-module.exports = (app) => {
-    app.get("/news-group", (req, res) => {
-        let conn = app.config.dbConnection();
-        let newsGroupModel = app.app.models.newsGroupModel;
+module.exports = (application) => {
+    application.get("/news-group", (req, res) => {
+        let conn = application.config.dbConnection();
+        let newsGroupModel = application.app.models.newsGroupModel;
 
         newsGroupModel.getNewsGroup(conn, (err, result) => {
             if (err) { throw err };
