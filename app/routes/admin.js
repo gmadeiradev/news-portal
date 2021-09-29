@@ -8,11 +8,11 @@ module.exports = (application) => {
         let news = req.body;
 
         // connection
-        let conn = application.config.dbConnection();
+        let connection = application.config.dbConnection();
         // model
-        let newsGroupModel = application.app.models.newsGroupModel;
+        let NewsGroupDAO = new application.app.models.NewsGroupDAO(connection);
         // saveNews
-        newsGroupModel.saveNews(news, conn, (err, result) => {
+        NewsGroupDAO.saveNews(news, (err, result) => {
             if (err) { throw err };
             // select view
             res.redirect("/news-group");
