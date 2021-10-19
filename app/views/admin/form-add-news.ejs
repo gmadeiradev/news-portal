@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Add News</title>
+  </head>
 
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Form Add News</title>
-</head>
+  <body>
+    <h1>Add News</h1>
 
-<body>
-
-	<h1>Add News</h1>
-
-	<form action="/news/save" method="POST">
-		<label for="">Title</label>
-		<input type="text" id="title" name="title" placeholder="News Title">
-		<br />
-		<label for="">News</label>
-		<textarea name="news" id="news" cols="30" rows="5"></textarea>
-		<br />
-		<input type="submit" value="Send">
-	</form>
-</body>
-
+    <form action="/news/save" method="POST">
+      <label for="">Title</label>
+      <input type="text" id="title" name="title" placeholder="News Title" />
+      <br />
+      <label for="">Abstract</label>
+      <input type="text" id="abstract" name="abstract" placeholder="Abstract" />
+      <br />
+      <label for="">Author</label>
+      <input type="text" id="author" name="author" placeholder="Author" />
+      <br />
+      <label for="">News Date</label>
+      <input
+        type="date"
+        id="date_news"
+        name="date_news"
+        placeholder="News date"
+      />
+      <br />
+      <label for="">News</label>
+      <textarea name="news" id="news" cols="30" rows="5"></textarea>
+      <br />
+      <input type="submit" value="Send" />
+    </form>
+  </body>
 </html>
