@@ -10,6 +10,16 @@
   <body>
     <h1>Add News</h1>
 
+    <% if(validation) { %>
+    <ul>
+      <% for(let i=0; validation.length; i++) { %> 
+        <li>
+          <%= validation[i].msg %>
+        </li>
+      <% } %>
+    </ul>
+    <% } %>
+
     <form action="/news/save" method="POST">
       <label for="">Title</label>
       <input type="text" id="title" name="title" placeholder="News Title" />

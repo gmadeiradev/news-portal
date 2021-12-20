@@ -1,7 +1,7 @@
 function NewsGroupDAO(connection) {
   this._connection = connection;
 }
-
+// doesn't work with arrow function
 // news group
 NewsGroupDAO.prototype.getNewsGroup = function (callback) {
   this._connection.query("SELECT * FROM news", callback);
